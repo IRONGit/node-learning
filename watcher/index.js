@@ -7,7 +7,7 @@ Watcher.prototype.watch = function () {
     let watcher = this
     fs.readdir(this.watchDir, function (err, files) {
         if (err) throw err
-        for (var index in files) {
+        for (let index in files) {
             watcher.emit('process', files[index])
         }
     })
